@@ -12,7 +12,11 @@ const port = 3005;
 
 app.listen(port, () =>{
     console.log(`rodando na porta ${port}`)
-})
+});
+
+app.get("/",(req, res) =>{
+    res.render("index.ejs")
+});
 
 
 
