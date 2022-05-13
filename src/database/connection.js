@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const sequelize = new Sequelize(
+export const connection = new Sequelize(
   process.env.DB_BASE,
   process.env.DB_USER,
   process.env.DB_PASS, 
@@ -13,7 +13,7 @@ const sequelize = new Sequelize(
   dialect: 'postgres'
 });
 
-module.exports = sequelize;
+// module.exports = Sequelize;
 
 // export const connection = new Sequelize(process.env.DATABASE_URL, {
 //     dialect: "postgres",

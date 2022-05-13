@@ -1,7 +1,7 @@
-import Sequelize  from "sequelize/types";
+import Sequelize  from "sequelize";
 import { connection } from "../database/connection.js";
 
-export const tarefas = connection.define("modelo",{
+export const tarefas = connection.define("tarefas",{
     id:{
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -35,3 +35,5 @@ const initTable = async () => {
         return error.message
     }
 };
+
+// initTable();
