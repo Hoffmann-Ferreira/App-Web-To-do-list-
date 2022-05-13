@@ -1,5 +1,6 @@
 import express  from "express";
 import path from "path";
+import dotenv from "dotenv";
 
 const __dirname = path.resolve(path.dirname(''));
 
