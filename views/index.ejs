@@ -10,7 +10,23 @@
 <body>
     <%- include("./partials/header.ejs") %> 
     <main>
-        <p>Hello word!!!</p>
+        <section id="tarefas">
+            <% monstraTarefas.forEach(element => { %>
+                <div class="post">
+                    <h1>
+                        <%= element.data %>
+                    </h1>
+                    <h1>
+                        <%= element.horas %>
+                    </h1>
+                    <h1>
+                        <%= element.tarefa %>
+                    </h1>
+                </div>
+             
+            <% }) %>
+        </section>
+        
     </main>
     <%- include("./partials/footer.ejs") %> 
 </body>

@@ -1,0 +1,33 @@
+/* Geral página */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* corpo */
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/quadroFundo.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+/* header */
+header{
+    border: solid white;
+    height: 10%;
+    width: 100%;
+    background-image: url(../img/fundoCabecalho.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+main{
+    width: 100%;
+    min-height: 80%;
+}
+main #tarefas{
+    border: solid red;
+    color:aliceblue
+}
