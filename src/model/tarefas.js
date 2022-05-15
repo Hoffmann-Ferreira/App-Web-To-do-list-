@@ -19,7 +19,12 @@ export const tarefas = connection.define("tarefas",{
     tarefa: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    nome: {
+        type: Sequelize.STRING,
+        allowNull: false
     }
+
 },{
     freezeTableName: true,
     createdAt: false,

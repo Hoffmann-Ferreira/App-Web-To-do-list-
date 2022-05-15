@@ -12,4 +12,17 @@ export const getIndex = async (req, res) => {
   }
 };
 
+export const getDetalhes = async(req, res) => {
+  try{
+    const detalhesTarefas = await tarefas.findByPk(req.params.id);
+
+    res.render("detalhes.ejs", {
+      detalhesTarefas
+    })
+
+  }catch(error){
+    res.send(error.message)
+  }
+}
+
 

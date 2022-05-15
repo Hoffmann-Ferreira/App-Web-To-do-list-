@@ -10,7 +10,20 @@
 <body>
     <%- include("./partials/header.ejs") %> 
     <main>
-        <p>Hello word!!!</p>
+        <div>
+            <h1>
+                <%= detalhesTarefas.nome %>
+            </h1>
+            <h1>
+                <%= detalhesTarefas.data %>
+            </h1>
+            <h1>
+                <%= detalhesTarefas.hora %>
+            </h1>
+            <h1>
+                <%= detalhesTarefas.tarefa %>
+            </h1>
+        </div>
     </main>
     <%- include("./partials/footer.ejs") %> 
     
