@@ -18,10 +18,24 @@ export const getDetalhes = async(req, res) => {
 
     res.render("detalhes.ejs", {
       detalhesTarefas
-    })
+    });
 
   }catch(error){
-    res.send(error.message)
+    res.send(error.message);
+  }
+};
+
+export const getApagar = async(req, res) => {
+  try{
+    await tarefas.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
+    res.redirect("/");
+
+  }catch(error){
+    res.send(error.message);
   }
 }
 

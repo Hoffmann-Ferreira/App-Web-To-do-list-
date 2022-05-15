@@ -13,8 +13,11 @@
         <section id="tarefas">
             <% monstraTarefas.forEach(element => { %>
                 <div class="post">
-                    <a>
-                        <img src
+                    <a href="/apagar/<%=element.id %> ">
+                        <img src="/img/apagar.png">
+                    </a>
+                    <a href="/editar/<%= element.id %> ">
+                        <img src="/img/editar.png">
                     </a>
                     <a href="/detalhes/<%= element.id %> ">
                         <h1>
