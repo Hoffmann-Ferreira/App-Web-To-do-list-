@@ -37,6 +37,30 @@ export const getApagar = async(req, res) => {
   }catch(error){
     res.send(error.message);
   }
-}
+};
+
+export const getCriar = (req, res) => {
+  res.render("criar.ejs");
+};
+
+export const postCriar = async (req, res) => {
+  const {nome, data, hora, descricao} = req.body;
+  try{
+    if(!nome || !data || !hora || !descricao){
+      res.send("É obrigatório o preenchimento de todas as informações");
+    } else {
+      await tarefas.create({
+        nome, 
+        data, 
+        hora, 
+        descricao
+      })
+    res.render("criar.ejs")
+    }
+
+  } catch(error){
+    res.send(error.message)
+  }
+};
 
 

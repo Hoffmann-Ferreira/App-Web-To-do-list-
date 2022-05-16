@@ -8,19 +8,19 @@ export const tarefas = connection.define("tarefas",{
         primaryKey: true, 
         autoIncrement: true
     },
-    data: {
-        type: Sequelize.DATE,
-        allowNull: false
-    },
-    horas: {
-        type: Sequelize.TIME,
-        allowNull: false
-    },
-    tarefa: {
+    nome: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    nome: {
+    data: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    hora: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    descricao: {
         type: Sequelize.STRING,
         allowNull: false
     }

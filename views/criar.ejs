@@ -10,7 +10,24 @@
 <body>
     <%- include("./partials/header.ejs") %> 
     <main>
-        <p>Hello word!!!</p>
+        <form method="post" action="/criar">
+            <fieldset>
+                <legend>CADASTRO DE TAREFA</legend>
+
+                <label for="nome">Nome </label>
+                <input type="text" name="nome" required>
+
+                <label for="data">DATA  </label>
+                <input type="text" name="data" required>
+
+                <label for="hora">tarefa </label>
+                <input type="text" name="hora" required>
+
+                <label for="descricao">DESCRIÇÃO </label>
+                <input type="text" name="descricao" required>
+            </fieldset>
+            <button type="submit">Cadastrar</button>
+        </form>
     </main>
     <%- include("./partials/footer.ejs") %> 
 </body>
